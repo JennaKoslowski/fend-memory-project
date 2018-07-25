@@ -3,6 +3,12 @@
  */
 let cardImage = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube", "fa-anchor", "fa-leaf", "fa-bicycle", "fa-diamond", "fa-bomb", "fa-leaf", "fa-bomb", "fa-bolt", "fa-bicycle", "fa-paper-plane-o",  "fa-cube"] ;
 
+
+for (x=0; x < cardImage.length; x++){
+  let card=document.createElement("div");
+  card.classList.add("card");
+  cardsContainer.appendChild("card");
+}
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
