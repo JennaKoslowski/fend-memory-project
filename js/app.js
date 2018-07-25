@@ -7,6 +7,7 @@ let cardImage = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-c
 for (x=0; x < cardImage.length; x++){
   let card=document.createElement("div");
   card.classList.add("card");
+  let icon= Math.floor(Math.random()*cardImage.length);
   cardsContainer.appendChild("card");
 }
 /*
