@@ -1,22 +1,14 @@
 /*
  * Create a list that holds all of your cards
  */
-let cardImage = ["fa-diamond", "fa-paper-plane-o", "fa-anchor", "fa-bolt", "fa-cube", "fa-anchor", "fa-leaf", "fa-bicycle", "fa-diamond", "fa-bomb", "fa-leaf", "fa-bomb", "fa-bolt", "fa-bicycle", "fa-paper-plane-o",  "fa-cube"] ;
-
-
-for (x=0; x < cardImage.length; x++){
-  let card=document.createElement("div");
-  card.classList.add("card");
-  cardsContainer.appendChild("card");
-}
-/*
+let cardImg = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o",  "fa fa-cube"] ;
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
 
-// Shuffle function from http://stackoverflow.com/a/2450976
+//Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -30,7 +22,16 @@ function shuffle(array) {
 
     return array;
 }
-
+let cardCat = document.querySelectorAll(".card");
+for (card of cardCat) {
+  card.addEventListener('click', function(e) {
+  if (e.target.className === 'card') { 
+    $(this).toggleClass('open');
+    $(this).toggleClass('show');
+      console.log ("card!!"); //won't flip
+   } 
+  })
+}
 
 /*
  * set up the event listener for a card. If a card is clicked:
