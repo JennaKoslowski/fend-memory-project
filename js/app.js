@@ -41,6 +41,21 @@ let cardCat = document.querySelectorAll(".card");
 for (var card of cardCat) {
   card.addEventListener('click',event)
 }
+
+function match() {
+  let cardA = openCard[0].firstElementChild.className;
+  let cardB = openCard[1].firstElementChild.className;
+  console.log(cardA + cardB);
+  if (cardA === cardB) {
+    $(openCard[0]).toggleClass("match");
+    $(openCard[1]).toggleClass("match");
+    openCard = []//stops flipping regardless of if they match
+  } else {
+    $(openCard[0]).removeClass("open show");
+    $(openCard[1]).removeClass("open show");
+    openCard = [];
+  }
+}
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
