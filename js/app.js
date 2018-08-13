@@ -2,7 +2,10 @@
  * Create a list that holds all of your cards
  */
 let cardImg = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o",  "fa fa-cube"] ;
- * Display the cards on the page
+
+let openCard = [];
+
+/* Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
@@ -22,17 +25,22 @@ function shuffle(array) {
 
     return array;
 }
-let cardCat = document.querySelectorAll(".card");
-for (card of cardCat) {
-  card.addEventListener('click', function(e) {
-  if (e.target.className === 'card') { 
-    $(this).toggleClass('open');
-    $(this).toggleClass('show');
-      console.log ("card!!"); //won't flip
-   } 
-  })
-}
 
+ let event = function(event) {
+    if (event.target.className === "card" && openCard.length < 2) {
+      $(this).toggleClass("open show");
+      openCard.push(this);
+      console.log(openCard); //add card to array
+      if (openCard.length === 2) {
+        setTimeout(match, 1000);
+      }
+    }
+  };
+
+let cardCat = document.querySelectorAll(".card");
+for (var card of cardCat) {
+  card.addEventListener('click',event)
+}
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
