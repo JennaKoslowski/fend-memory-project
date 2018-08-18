@@ -77,3 +77,13 @@ function moves() {
   movesCount++;
   document.querySelector(".moves").innerHTML = movesCount;
 }
+function starCount() {
+  for (var star of stars) {
+    if (movesCount === 10 || movesCount === 20 || moves === 30) {
+      if (star.style.display !== "none") {
+        star.style.display = "none";  
+        break;
+      }
+    }
+  }
+}
