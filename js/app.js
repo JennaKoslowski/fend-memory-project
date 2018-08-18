@@ -43,6 +43,15 @@ function shuffle(array) {
     return array;
 }
 
+function shuffleCards() {
+  let deckChild = Array.from(document.querySelectorAll(".deck li"));
+  let shuffledCards = shuffle(deckChild);
+  for (var cardType of shuffledCards) {
+    console.log(deck);
+   deck.appendChild(cardType);
+} }
+shuffleCards(); 
+
  let event = function(event) {
     if (event.target.className === "card" && openCard.length < 2) {
       $(this).toggleClass("open show");
