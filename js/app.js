@@ -122,3 +122,15 @@ function visibleModal(){
   $(modal).toggleClass("invisible");
   $(modal_pop).toggleClass("invisible");
 }
+
+function resetCards() {
+  $(".card").removeClass("open show match");
+  openCard = [];
+  matchedCards= [];
+  movesCount = 0; //doesn't work
+  seconds = 0;
+  minutes = 0;
+  starCount();
+}
+
+restart.addEventListener("click", resetCards);
