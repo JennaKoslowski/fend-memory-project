@@ -137,6 +137,10 @@ function visibleModal(){
   $(modal_pop).toggleClass("invisible");
 }
 
+fuction playAgain (){
+  model_button.addEventListener("click", resetCards);
+}
+
 function resetCards() {
   $(".card").removeClass("open show match");
   openCard = [];
