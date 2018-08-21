@@ -25,7 +25,8 @@ let cardCat = document.querySelectorAll(".card");
 let deck = document.querySelector(".deck");
 let stars = document.querySelectorAll(".fa-star");
 let movesCount = 0;
-
+let seconds = 0;
+let minutes = 0;
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
   var currentIndex = array.length,
@@ -83,9 +84,6 @@ function match() { //check if selected cards match
   }
 }
 
-function timer() {}
-
-
 function moves() {
   movesCount++;
   document.querySelector(".moves").innerHTML = movesCount;
@@ -99,5 +97,16 @@ function starCount() {
         break;
       }
     }
+  }
+}
+function timeCount() {
+  seconds++;
+  if (seconds <10) {
+    document.querySelector(".stopwatch").innerHTML = minutes + " : 0" + seconds;
+  }
+  if (seconds >= 60) {
+    seconds = 0;
+    minutes++;
+    document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
   }
 }
