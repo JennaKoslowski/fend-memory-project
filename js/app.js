@@ -146,6 +146,7 @@ function resetCards() {
   seconds = 0;
   minutes = 0;
   starCount();
+  shuffleCards();
 }
 
 restart.addEventListener("click", resetCards);
