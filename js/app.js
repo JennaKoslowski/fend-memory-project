@@ -141,7 +141,8 @@ function resetCards() {
   $(".card").removeClass("open show match");
   openCard = [];
   matchedCards= [];
-  movesCount = 0; //doesn't work
+  movesCount= 0;
+  document.querySelector(".moves").innerHTML = movesCount;
   seconds = 0;
   minutes = 0;
   starCount();
