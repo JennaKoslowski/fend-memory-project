@@ -110,6 +110,14 @@ function timeCount() {
     document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
   }
 }
+
+function endGame() {
+  if (matchedCards == 4){
+    alert ("game over");
+      visibleModal();
+  }
+}
+
 function visibleModal(){
   $(modal).toggleClass("invisible");
   $(modal_pop).toggleClass("invisible");
