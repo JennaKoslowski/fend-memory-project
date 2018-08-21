@@ -110,3 +110,7 @@ function timeCount() {
     document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
   }
 }
+function visibleModal(){
+  $(modal).toggleClass("invisible");
+  $(modal_pop).toggleClass("invisible");
+}
