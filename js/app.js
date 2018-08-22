@@ -126,20 +126,29 @@ function timeCount() {
 
 
 function endGame() {
-  if (matchedCards == 4){
+  if (matchedCards == 16){
     alert ("game over");
       visibleModal();
   }
 }
 
-function visibleModal(){
-  $(modal).toggleClass("invisible");
-  $(modal_pop).toggleClass("invisible");
+function visibleModal() {
+  $(modal).toggleClass("visible");
+  $(modal_pop).toggleClass("visible");
+  }
+
+function printStats() { //insert stats into HTML code
+  let statsMove = document.querySelector(".statsMoves"); 
+  let statTime = document.querySelector(".statsTime");
+  let statsStar = document.querySelector(".statsStars");
+    statTime.innerHTML = `Time: ${document.querySelector('.stopwatch').innerText}`; 
+    statsMove.innerHTML = `Moves: ${document.querySelector('.moves').innerText}`; 
+  console.log(numStars)
+    statsStar.innerHTML = `Stars: ${numStars}`;
 }
 
-fuction playAgain (){
   model_button.addEventListener("click", resetCards);
-}
+
 
 function resetCards() {
   $(".card").removeClass("open show match");
