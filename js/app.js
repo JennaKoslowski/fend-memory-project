@@ -25,10 +25,14 @@ let matchedCards = [];
 let cardCat = document.querySelectorAll(".card");
 let deck = document.querySelector(".deck");
 let stars = document.querySelectorAll(".fa-star");
+let numStars = 3;
 let movesCount = 0;
 var restart = document.querySelector(".restart");
 let seconds = 0;
 let minutes = 0;
+let modal = document.querySelector(".modal");
+let modal_pop = document.querySelector(".modal_pop");
+let modal_button = document.querySelector(".modal_button");
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -64,7 +68,7 @@ let event = function(event) {
       setTimeout(match, 1000);
       moves();
       starCount();
-      setTimeout(timeCount, 1000);
+       setTimeout(timeCount, 1000);
     }
   }
 };
@@ -83,7 +87,7 @@ function match() {
     $(openCard[1]).toggleClass("match");
     matchedCards.push(cardA);
     matchedCards.push(cardB);
-    console.log(matchedCards);
+    endGame();
     openCard = [];
   } else {
     $(openCard[0]).removeClass("open show");
@@ -98,38 +102,50 @@ function moves() {
 }
 
 function starCount() {
-  for (var star of stars) {
+  for (var star of stars) { // puts stars back as well during reset
     if (movesCount === 10 || movesCount === 20 || moves === 30) {
       if (star.style.display !== "none") {
         star.style.display = "none";
+        numStars--;
         break;
       }
     }
-    else if (star.style.display = "none") {
-      star.style.display = "inline-block";
-    }
   }
 }
-setInterval(timeCount, 500);
+function addStar(){
+  for (var star of stars){
+  if (star.style.display == "none") {
+      star.style.display = "inline-block";
+    }
+}
+}
+var  timer = setInterval(timeCount, 1000);
 
 function timeCount() {
   seconds++;
-  if (seconds <10) {
+  if (seconds < 10) {
     document.querySelector(".stopwatch").innerHTML = minutes + " : 0" + seconds;
-  }
-  if (seconds >= 60) {
+  } else if (seconds < 60) {
+    document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
+  } else if (seconds == 60) {
     seconds = 0;
     minutes++;
     document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
   }
 }
 
-
 function endGame() {
-  if (matchedCards == 16){
-    alert ("game over");
-      visibleModal();
+  if (matchedCards.length == 16) {
+    stopTimer();
+    visibleModal();
+    printStats();
   }
+}
+
+function stopTimer() {
+  clearInterval(timer);
+  seconds = 0;
+  minutes = 0;
 }
 
 function visibleModal() {
@@ -147,19 +163,22 @@ function printStats() { //insert stats into HTML code
     statsStar.innerHTML = `Stars: ${numStars}`;
 }
 
-  model_button.addEventListener("click", resetCards);
+  document.querySelector(".modal_button").addEventListener("click", resetCards); 
+ 
 
-
-function resetCards() {
+function resetCards() { //used for Play again and reset button
   $(".card").removeClass("open show match");
   openCard = [];
-  matchedCards= [];
-  movesCount= 0;
+  matchedCards = [];
+  movesCount = 0;
   document.querySelector(".moves").innerHTML = movesCount;
-  seconds = 0;
-  minutes = 0;
+  stopTimer();
   starCount();
   shuffleCards();
+  addStar();
+  $(modal).removeClass("visible");
+  $(modal_pop).removeClass("visible");
+  setInterval(timeCount, 1000);
 }
 
 restart.addEventListener("click", resetCards);

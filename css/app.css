@@ -106,11 +106,6 @@ h1 {
   float: right;
   cursor: pointer;
 }
-/*
-*
-modal
-*
-*/
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
