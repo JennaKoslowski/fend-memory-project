@@ -18,3 +18,6 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+How to Play: 
+Click on two cards, if they match they stay up, if not they flip back over. When you have all 8 matches the game is won. You lose a star every 10 turns. 
