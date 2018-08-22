@@ -60,7 +60,7 @@ function shuffleCards() {
 }
 shuffleCards();
 
-let event = function(event) {
+let event = function(event) { 
   if (event.target.className === "card" && openCard.length < 2) {
     $(this).toggleClass("open show");
     openCard.push(this); //add card to array
@@ -153,7 +153,7 @@ function visibleModal() {
   $(modal_pop).toggleClass("visible");
   }
 
-function printStats() { //insert stats into HTML code
+function printStats() { //insert stats into HTML code- help from cohort
   let statsMove = document.querySelector(".statsMoves"); 
   let statTime = document.querySelector(".statsTime");
   let statsStar = document.querySelector(".statsStars");
