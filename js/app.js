@@ -68,7 +68,6 @@ let event = function(event) {
       setTimeout(match, 1000);
       moves();
       starCount();
-       setTimeout(timeCount, 1000);
     }
   }
 };
