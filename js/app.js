@@ -60,8 +60,8 @@ function shuffleCards() {
 }
 shuffleCards();
 
-let event = function(event) { 
-  if (event.target.className === "card" && openCard.length < 2) {
+let flipCard = function(flipCard) { 
+  if (flipCard.target.className === "card" && openCard.length < 2) {
     $(this).toggleClass("open show");
     openCard.push(this); //add card to array
     if (openCard.length === 2) {
@@ -74,7 +74,7 @@ let event = function(event) {
 
 for (var card of cardCat) {
   //for loop/event function inspired by Matt's tutorial
-  card.addEventListener("click", event);
+  card.addEventListener("click", flipCard);
 }
 
 function match() {
