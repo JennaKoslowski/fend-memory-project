@@ -4,7 +4,7 @@
 
 * [Instructions](#instructions)
 * [Contributing](#contributing)
-* [How to Play] (#How To Play)
+* [How to Play](#HowToPlay)
 
 ## Instructions
 
@@ -20,8 +20,7 @@ This repository is the starter code for _all_ Udacity students. Therefore, we mo
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
-<<<<<<< HEAD
-## How To Play
+## HowToPlay
 
 Download or clone repository, extract the .zip file and open index.html in browser.
 
