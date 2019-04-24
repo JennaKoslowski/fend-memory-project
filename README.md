@@ -17,6 +17,6 @@ Click on two cards, if they match they stay up, if not they flip back over. When
     
 This game uses JavaScript and JQuery.
 
-<img src="img/memory-game.jpg">
+<img src="img\memory-game.JPG">
 <img src="img\Memory-Game-in-play.JPG">
-<img src="./img/Memory-game-won.JPG">
+<img src="img\Memory-game-won.JPG">
