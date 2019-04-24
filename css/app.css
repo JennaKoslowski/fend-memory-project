@@ -116,11 +116,11 @@ h1 {
   display: none;
 }
 .modal_pop {
-display: none;
+  display: none;
   padding: 5px;
   position: fixed;
-  margin-left: 40%;
-  margin-top: 10%;
+  margin-left: 42%;
+  margin-top: 15%;
   width: 300px;
   height: 300px;
   background-color: rgb(255, 255, 255);
