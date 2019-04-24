@@ -16,3 +16,7 @@ Download or clone repository, extract the .zip file and open index.html in brows
 Click on two cards, if they match they stay up, if not they flip back over. When you have all 8 matches the game is won. You lose a star every 10 turns.
     
 This game uses JavaScript and JQuery.
+
+![Memory Game Start](/img/memory-game.jpg)
+![Memory Game Progress](/img/memory-game-in-play.jpg)
+![Memory Game End](/img/memory-game-won.jpg)
