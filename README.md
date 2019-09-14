@@ -20,3 +20,6 @@ This game uses JavaScript and JQuery.
 <img src="img\memory-game.JPG">
 <img src="img\Memory-Game-in-play.JPG">
 <img src="img\Memory-game-won.JPG">
+
+Sept 2019: Matching game, but make it spooky-
+    I edited the font awesome capabilities and CSS in order to make it Halloween themed.
