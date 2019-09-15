@@ -17,7 +17,6 @@ body {
 }
 
 body {
-  background: #ffffff url("../img/geometry2.png"); /* Background pattern from Subtle Patterns */
   font-family: 'Griffy', cursive;
 }
 
@@ -26,11 +25,29 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: repeating-linear-gradient(
+  to right,
+  #644b77,
+  #644b77 50px,
+  #2e2e2e 50px,
+  #2e2e2e 70px
+);
 }
 
 h1 {
   font-family: 'Griffy', cursive;
+  color:#facd63;
   font-weight: 300;
+  font-size: 4em;
+}
+.moves, .stopwatch{
+  font-family: 'Griffy', cursive;
+  color:#facd63;
+  font-weight: 300;
+  font-size: 2em;
+}
+.fas {
+  color: #facd63
 }
 
 /*
