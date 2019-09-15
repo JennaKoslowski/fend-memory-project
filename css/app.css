@@ -18,6 +18,7 @@ body {
 
 body {
   font-family: 'Griffy', cursive;
+  color:#facd63;
 }
 
 .container {
@@ -39,13 +40,6 @@ h1 {
   color:#facd63;
   font-weight: 300;
   font-size: 4em;
-}
-.moves, .stopwatch{
-  display: flex;
-  font-family: 'Griffy', cursive;
-  color:#facd63;
-  font-weight: 300;
-  font-size: 2em;
 }
 
 /*
@@ -106,9 +100,13 @@ h1 {
 .score-panel {
   text-align: left;
   display: flex;
-  justify-content: space-evenly;
-  width: 345px;
+  justify-content: space-between;
+  width: 500px;
   margin-bottom: 10px;
+  font-family: 'Griffy', cursive;
+  color:#facd63;
+  font-weight: 300;
+  font-size: 2em;
 }
 
 .score-panel .stars {
