@@ -41,13 +41,11 @@ h1 {
   font-size: 4em;
 }
 .moves, .stopwatch{
+  display: flex;
   font-family: 'Griffy', cursive;
   color:#facd63;
   font-weight: 300;
   font-size: 2em;
-}
-.fas {
-  color: #facd63
 }
 
 /*
@@ -98,9 +96,7 @@ h1 {
   font-size: 33px;
 }
 .fas {
-  height: 20px;
-  width: 20px;
-  color: black;
+  color:#facd63
 }
 
 /*
@@ -109,13 +105,15 @@ h1 {
 
 .score-panel {
   text-align: left;
+  display: flex;
+  justify-content: space-evenly;
   width: 345px;
   margin-bottom: 10px;
 }
 
 .score-panel .stars {
   padding: 0;
-  display: inline-block;
+  display: flex;
   margin: 0 5px 0 0;
 }
 
@@ -125,7 +123,7 @@ h1 {
 }
 
 .score-panel .restart {
-  float: right;
+  display: flex;
   cursor: pointer;
 }
 .modal {
