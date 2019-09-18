@@ -137,7 +137,7 @@ function timeCount() {
   } else if (seconds == 60) {
     seconds = 00;
     minutes++;
-    document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
+    document.querySelector(".stopwatch").innerHTML = minutes + " :00";
   }
 }
 
