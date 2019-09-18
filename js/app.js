@@ -24,7 +24,7 @@ let openCard = [];
 let matchedCards = [];
 let cardCat = document.querySelectorAll(".card");
 let deck = document.querySelector(".deck");
-let stars = document.querySelectorAll(".fa-star");
+let stars = document.querySelectorAll(".fa-cloud-moon");
 let numStars = 3;
 let movesCount = 0;
 var restart = document.querySelector(".restart");
@@ -159,7 +159,7 @@ function printStats() { //insert stats into HTML code- help from cohort
     statTime.innerHTML = `Time: ${document.querySelector('.stopwatch').innerText}`; 
     statsMove.innerHTML = `Moves: ${document.querySelector('.moves').innerText}`; 
   console.log(numStars)
-    statsStar.innerHTML = `Stars: ${numStars}`;
+    statsStar.innerHTML = `Moons: ${numStars}`;
 }
 
   document.querySelector(".modal_button").addEventListener("click", resetCards); 
