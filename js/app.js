@@ -97,7 +97,12 @@ function match() {
 
 function moves() {
   movesCount++;
-  document.querySelector(".moves").innerHTML = movesCount;
+  if (movesCount == 1){
+  document.querySelector(".moves").innerHTML = movesCount + " Move";
+}
+  else {
+    document.querySelector(".moves").innerHTML = movesCount + " Moves";
+  }
 }
 
 function starCount() {
@@ -122,12 +127,15 @@ var  timer = setInterval(timeCount, 1000);
 
 function timeCount() {
   seconds++;
-  if (seconds < 10) {
+  if (seconds == 0) {
+    document.querySelector(".stopwatch").innerHTML = minutes + " :00";
+  }
+  else if (seconds > 0 && seconds < 10) {
     document.querySelector(".stopwatch").innerHTML = minutes + " : 0" + seconds;
   } else if (seconds < 60) {
     document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
   } else if (seconds == 60) {
-    seconds = 0;
+    seconds = 00;
     minutes++;
     document.querySelector(".stopwatch").innerHTML = minutes + " :" + seconds;
   }
