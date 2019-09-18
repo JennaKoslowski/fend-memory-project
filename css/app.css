@@ -16,9 +16,37 @@ body {
   padding: 0;
 }
 
+:root {
+  --orange1: #fd990d;
+  --orange2: #facd63;
+  --ltpurp: #a78eb8;
+  --darkpurp: #644b77;
+  --darkest: #2e2e2e;
+}
+
 body {
   font-family: 'Griffy', cursive;
-  color:#facd63;
+  color:var(--orange2);
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Griffy', cursive;
+  color:var(--orange2);
+  font-weight: 300;
+  font-size: 4em;
+  display: block;
+}
+
+h2 {
+  font-family: 'Griffy', cursive;
+  color:var(--orange2);
+  font-weight: 200;
+  font-size: 2em;
+  display: block;
 }
 
 .container {
@@ -28,18 +56,11 @@ body {
   flex-direction: column;
   background: repeating-linear-gradient(
   to right,
-  #644b77,
-  #644b77 50px,
-  #2e2e2e 50px,
-  #2e2e2e 70px
+  var(--darkpurp),
+  var(--darkpurp) 50px,
+  var(--darkest) 50px,
+  var(--darkest) 70px
 );
-}
-
-h1 {
-  font-family: 'Griffy', cursive;
-  color:#facd63;
-  font-weight: 300;
-  font-size: 4em;
 }
 
 /*
@@ -49,7 +70,7 @@ h1 {
 .deck {
   width: 660px;
   min-height: 680px;
-  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  background: linear-gradient(160deg, var(--orange1) 0%, var(--ltpurp) 75%);
   padding: 32px;
   border-radius: 10px;
   box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -76,7 +97,7 @@ h1 {
 
 .deck .card.open {
   transform: rotateY(0);
-  background: #02b3e4;
+  background: var(--darkest);
   cursor: default;
 }
 
@@ -86,7 +107,7 @@ h1 {
 
 .deck .card.match {
   cursor: default;
-  background: #02ccba;
+  background: var(--darkpurp);
   font-size: 33px;
 }
 .fas {
